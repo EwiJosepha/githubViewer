@@ -1,7 +1,7 @@
 const enter= document.getElementById('enter-name')
 const check= document.getElementById('check')
 const output= document.getElementById('output')
-const p= document.createElement('p')
+let p= document.createElement('p')
 output.append(p)
 
 check.addEventListener('click', getFunction)
@@ -16,7 +16,8 @@ function getFunction () {
 
   .then ( (data)=>{
     data.items.forEach(i => {
-      console.log(i.full_name)
+      output.appendChild(document.createTextNode(i.full_name))
+      output.appendChild(document.createElement('br'))
     });
 
   })
@@ -25,5 +26,4 @@ function getFunction () {
   // .then((data)=>{
   //   console.log(data)
   // })
-  output.innerHTML
 }
