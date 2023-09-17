@@ -1,12 +1,14 @@
-const check = document.getElementById("check");
-const output = document.getElementById("output");
-const form = document.querySelector(".input-field");
-let img= document.createElement('img')
-let h3 = document.createElement("h3");
-let p = document.createElement("p");
+const check = document.getElementById("check")
+const output = document.getElementById("output")
+const form = document.querySelector(".input-field")
+let img = document.createElement("img")
+let h3 = document.createElement("h3")
+let p = document.createElement("p")
+let a = document.createElement("a")
 // output.append(h2)
-output.append(h3);
+output.append(h3)
 output.append(img)
+output.append(a)
 // h2.append(ul)
 
 // let p= document.createElement('p')
@@ -22,7 +24,7 @@ form.addEventListener("submit", (event) => {
   let netvalue = enter
   let secondEnter = netvalue
   console.log(secondEnter)
-  let url = "https://api.github.com/users/" +secondEnter
+  let url = "https://api.github.com/users/" + secondEnter
   fetch(url)
     .then((res) => {
       return res.json()
@@ -30,21 +32,20 @@ form.addEventListener("submit", (event) => {
     })
 
     .then((data) => {
-      if(data.message){
-        console.log('user not found')
-        output.innerHTML=`<P>Profile is not Valid</P>`
-      }else{
+      if (data.message) {
+        console.log("user not found")
+        output.innerHTML = `<P>Profile is not Valid</P>`
+      } else {
         // console.log(data)
+        //viewing github profile
         `<img src="${data.avatar_url}">
         <p> ${data.name}  ${data.login}</P>`
-        output.innerHTML= `<img src="${data.avatar_url}">
-        <p> ${data.login}</P>`
-        img.style.width= '50px'
-        img.style.height= '50px'
-        img.style.borderRadius = '50%'
+        output.innerHTML = `<img src="${data.avatar_url}">
+        
+        <a href = "${data.html_url}" target="_blank">View-Profile</a>`
       }
     })
-    .catch((error)=>{
+    .catch((error) => {
       console.log(error)
     })
 })
