@@ -8,7 +8,7 @@
 body {
   width: 90vw;
   height: 90vh;
-  background-color: #fbf6f6;
+  background-color: #fff;
 } 
 
 .header {
@@ -21,13 +21,18 @@ body {
 }
 
 h1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #11b711;
   /* margin-left: 70px; */
   padding-top: 30px;
 }
 
 .wrapper-btns {
+  padding: 10px;
   padding-top: 40px;
+  padding-bottom: 60px;
   display: flex;
   width: 80vw;
   height: 50px;
@@ -42,39 +47,51 @@ h1{
   align-items: center;
   padding: 10px;
   border: 1px solid #c2bbbb;
-  width: 90%;
+  width: 45%;
   height: 40px;
+  background-color: #06e806;
+  box-shadow: 2px 2px 8px 2px #6f6c6c;
   border-radius: 30px;
-  color: #11b711;
+  padding: 15px;
+  color: #fff;
   outline: none;
   margin-left: 50px;
 }
 
 .input-field{
   display: flex;
+  gap: 40px;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 65%;
 }
 
 #check {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #11b711;
+  background-color: #0ce70c;
   border: 1px solid #11b711;
   border-radius: 30px;
   color: #5b5555;
-  width: 10%;
+  width: 20%;
   padding: 10px;
+  box-shadow: 2px 2px 8px 2px #6f6c6c;
+  padding-bottom: 16px;
   height: 40px;
 }
 
 #output {
-  /* width: 60%; */
-  padding: 30px;
-  /* background-color: #11b711; */
+  display: flex;
+  /* margin: 0 auto; */
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  height: 400px;
+  padding: 60px;
+  background-color: #fdfafa;
   color: #11b711;
-  /* box-shadow: 2px 2px 2px 2px #000; */
-  /* border: 1px solid #045004; */
+  box-shadow: 2px 2px 10px 2px #000;
+  border: 1px solid #045004;
+  border-radius: 30px;
 }
