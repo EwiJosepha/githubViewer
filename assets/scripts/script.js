@@ -1,10 +1,8 @@
-const check = document.getElementById('check')
 const output = document.getElementById('output')
 const form = document.querySelector('.input-field')
-let img = document.createElement('img')
-let h3 = document.createElement('h3')
-let p = document.createElement('p')
-let a = document.createElement('a')
+const img = document.createElement('img')
+const h3 = document.createElement('h3')
+const a = document.createElement('a')
 output.append(h3)
 output.append(img)
 output.append(a)
@@ -12,14 +10,13 @@ output.append(a)
 form.addEventListener('submit', (event) => {
   event.preventDefault()
   let enter = document.getElementById('enter-name').value
-  let netvalue = enter
-  let secondEnter = netvalue
+  const netvalue = enter
+  const secondEnter = netvalue
   console.log(secondEnter)
-  let url = "https://api.github.com/users/" + secondEnter
+  const url = 'https://api.github.com/users/' + secondEnter
   fetch(url)
     .then((res) => {
-      return res.json()
-      // console.log(res)
+     return res.json()
     })
 
     .then((data) => {
