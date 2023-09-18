@@ -9,24 +9,23 @@ output.append(a)
 
 form.addEventListener('submit', (event) => {
   event.preventDefault()
-  let enter = document.getElementById('enter-name').value
+  const enter = document.getElementById('enter-name').value
   const netvalue = enter
   const secondEnter = netvalue
   console.log(secondEnter)
   const url = 'https://api.github.com/users/' + secondEnter
   fetch(url)
     .then((res) => {
-     return res.json()
+      return res.json()
     })
 
     .then((data) => {
       if (data.message) {
         console.log('user not found')
-        output.innerHTML = `<P>Profile is not Valid</P>`
+        output.innerHTML = '<P>Profile is not Valid</P>'
       } else {
-        //viewing github profile
-        `<img src='${data.avatar_url}'>
-        <p> ${data.name}  ${data.login}</P>`
+        // viewing github profile
+        // `<img src='${data.avatar_url}'>`
         output.innerHTML = `<img src="${data.avatar_url}">
         
         <a href = '${data.html_url}' target='_blank'>View-Profile</a>`
