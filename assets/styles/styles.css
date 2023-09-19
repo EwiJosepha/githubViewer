@@ -90,6 +90,7 @@ h1 {
 
 #output {
   display: flex;
+  flex-direction: column;
   gap: 30px;
   margin: 0 auto;
   justify-content: center;
@@ -105,8 +106,8 @@ h1 {
 }
 
 #output img {
-  width: 52%;
-  height: 180px;
+  width: 45%;
+  height: 200px;
   border-radius: 50%;
 }
 
