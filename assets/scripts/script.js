@@ -25,10 +25,7 @@ form.addEventListener('submit', (event) => {
         output.innerHTML = '<P>Profile is not Valid</P>'
       } else {
         // viewing github profile
-        output.innerHTML = `<img src="${data.avatar_url}">
-
-          <P>Profile-Name: ${data.login}</p>
-          <a href = '${data.html_url}' target='_blank'>View-Profile</a>`
+        output.innerHTML = `<img src="${data.avatar_url}"><P>Profile-Name: ${data.login}</p><a href = '${data.html_url}' target='_blank'>View-Profile</a>`
 
       }
       console.log(data)
@@ -37,4 +34,3 @@ form.addEventListener('submit', (event) => {
       console.log(error)
     })
 })
-        // `<img src='${data.avatar_url}'>`
