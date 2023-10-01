@@ -11,6 +11,13 @@ body {
   background-color: #03034b;
 }
 
+p {
+  margin: 0 auto;
+  padding-left: 10px;
+  text-align: center;
+  color: #11cd11;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -29,6 +36,7 @@ main {
 }
 
 h1 {
+  flex-wrap: wrap;
   text-align: center;
   color: #fff;
   padding-top: 30px;
@@ -105,7 +113,7 @@ h1 {
 }
 
 #output img {
-  width: 45%;
+  width: 40%;
   height: 200px;
   border-radius: 50%;
 }
@@ -113,11 +121,11 @@ h1 {
 #output a {
   color: #fff;
   width: 20%;
-  background-color: #010154;
+  background-color: #008000;
   height: 30px;
   padding: 10px;
-  padding-bottom: 10px;
-  border: 2px solid #01014d;
+  text-align: center;
+  border: 1px solid #014d26;
 }
 
 .fa-brands {
@@ -125,4 +133,16 @@ h1 {
   height: 50px;
   font-size: 50px;
   color: #fff;
+}
+
+.featureflexing {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.profilePicture {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
 }
