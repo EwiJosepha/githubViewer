@@ -135,13 +135,13 @@ h1 {
   color: #fff;
 }
 
-.featureflexing {
+.flexingfeatures {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
 }
 
-.profilePicture {
+.picture {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
